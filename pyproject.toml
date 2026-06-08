@@ -1,0 +1,11 @@
+[project]
+name = "dieta-runtime"
+version = "1.0.0"
+description = "Controlled ontology-constrained multi-agent runtime for DIETA knowledge graph construction"
+requires-python = ">=3.10"
+dependencies = ["pandas", "numpy", "requests", "tqdm", "openpyxl"]
+
+[project.optional-dependencies]
+biomedical = ["sentence-transformers", "faiss-cpu", "transformers", "rdflib", "scipy"]
+
+test = ["pytest"]

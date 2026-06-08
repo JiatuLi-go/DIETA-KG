@@ -1,0 +1,122 @@
+workflow_id: DIETA_controlled_workflow
+workflow_type: controlled_task_ontology_constrained_multi_agent_workflow
+legacy_output_policy:
+  final_outputs_keep_legacy_file_names: true
+  final_outputs_keep_legacy_columns: true
+  ablation_outputs_are_additive: true
+agents:
+  - id: triage_agent
+    role: ontology-constrained semantic router
+    input: data/diabetes_diet_papers*.csv
+    output: results/semantic_triage/semantic_triage_latest.xlsx
+    handoff_to: seed_entity_agent
+  - id: seed_entity_agent
+    role: route-conditioned pretrained entity seeding
+    input: results/semantic_triage/semantic_triage_latest.xlsx
+    output: results/seed_entity/seed_entity_latest.json
+    handoff_to: candidate_entity_agent
+  - id: candidate_entity_agent
+    role: multi-path candidate entity generator
+    input: results/seed_entity/seed_entity_latest.json
+    output:
+      - results/candidate_extraction/candidate_entity_extraction_latest.json
+      - results/candidate_extraction/candidate_entity_extraction_latest.xlsx
+    handoff_to: candidate_relation_agent
+  - id: candidate_relation_agent
+    role: route-conditioned relation generator
+    input: results/candidate_extraction/candidate_entity_extraction_latest.json
+    output:
+      - results/candidate_extraction/candidate_relation_extraction_latest.json
+      - results/candidate_extraction/candidate_relation_extraction_latest.xlsx
+    handoff_to: critic_agent
+  - id: critic_agent
+    role: entropy-aware quality adjudicator
+    formula: s^(k)(t)=lambda_reflect(k)*Q^(k)(t)-lambda*U^(0)(t)
+    input:
+      - results/candidate_extraction/candidate_entity_extraction_latest.json
+      - results/candidate_extraction/candidate_relation_extraction_latest.json
+    output:
+      - results/quality_decision/quality_decision_latest.json
+      - results/quality_decision/quality_decision_latest.xlsx
+    handoff_to: quality_contract_agent
+  - id: quality_contract_agent
+    role: Step4 legacy output contract guard
+    input:
+      - results/quality_decision/quality_decision_latest.json
+      - results/quality_decision/quality_decision_latest.xlsx
+    output:
+      - results/quality_decision/quality_decision_latest.xlsx
+      - results/contracts/output_contract_report.json
+    handoff_to: grounding_agent
+  - id: grounding_agent
+    role: type-aware semantic anchoring agent
+    input: results/quality_decision/quality_decision_latest.json
+    output:
+      - results/grounding_alignment/grounding_alignment_latest.json
+      - results/grounding_alignment/grounding_alignment_latest.xlsx
+      - results/grounding_alignment/feedback_refinement_requests.json
+    conditional_handoff:
+      if_feedback_requests_exist: feedback_controller
+      otherwise: final_contract_guard_agent
+  - id: feedback_controller
+    role: bounded feedback refinement controller
+    input: results/grounding_alignment/feedback_refinement_requests.json
+    output:
+      - results/grounding_alignment/grounding_alignment_latest.json
+      - results/grounding_alignment/grounding_alignment_latest.xlsx
+    handoff_to: final_contract_guard_agent
+  - id: final_contract_guard_agent
+    role: Step5 legacy output contract guard
+    input:
+      - results/grounding_alignment/grounding_alignment_latest.json
+      - results/grounding_alignment/grounding_alignment_latest.xlsx
+    output:
+      - results/grounding_alignment/grounding_alignment_latest.xlsx
+      - results/contracts/output_contract_report.json
+    handoff_to: ablation_trace_agent
+  - id: ablation_trace_agent
+    role: ablation-ready intermediate trace exporter
+    input:
+      - results/candidate_extraction/candidate_relation_extraction_latest.json
+      - results/quality_decision/quality_decision_latest.json
+    output:
+      - results/ablation/<variant>/ablation_trace_latest.jsonl
+      - results/ablation/<variant>/ablation_config.json
+    handoff_to: __end__
+contracts:
+  step5_grounding_alignment_latest_xlsx:
+    columns:
+      - pmid
+      - subject
+      - relation
+      - object
+      - source_cluster
+      - quality_tier
+      - Score_t
+      - head_status
+      - head_standard
+      - head_similarity
+      - tail_status
+      - tail_standard
+      - tail_similarity
+      - needs_feedback
+      - feedback_completed
+  step4_quality_decision_latest_xlsx:
+    columns:
+      - pmid
+      - subject
+      - subject_type
+      - relation
+      - object
+      - object_type
+      - P_entity_head
+      - P_entity_tail
+      - P_relation
+      - Q_t
+      - U_t
+      - Score_t
+      - quality_tier
+      - lambda_reflect
+      - Q_t_penalized
+      - feedback_rounds
+      - source_cluster

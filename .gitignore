@@ -1,0 +1,33 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# local data and generated outputs
+code/dieta_core/data/*.csv
+code/dieta_core/data/*.xlsx
+code/dieta_core/results/
+code/dieta_core/grounding_data/index/
+code/dieta_core/本体/
+
+# large model/index/cache artifacts
+*.faiss
+*.pkl
+*.npy
+*.pt
+*.bin
+*.safetensors
+
+# private manuscripts and generated tables
+*.docx
+*.pdf
+*.xlsx
+*.xls
+*.csv
+
+# runtime snapshots
+agent_run_state.json
+workflow_graph.mmd

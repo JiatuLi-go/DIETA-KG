@@ -1,0 +1,229 @@
+{
+  "project": "DIETA",
+  "file_hashes": [
+    {
+      "path": ".env.example",
+      "sha256": "0d18f2bef7499ce15b6bcd5bc699359972a95b818f487ebf6ea6467fedb98e79"
+    },
+    {
+      "path": ".github/workflows/contract-tests.yml",
+      "sha256": "697f31d481103b6d0bb8694cc731d06218c0673305ef64050203a6b85daaacdd"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "e08cabe14cda6dcf760c9e2fdd81c26997799887de9c522d006d119f57babfde"
+    },
+    {
+      "path": "MODEL_AND_DATA_MANIFEST.json",
+      "sha256": "ba7c75be7e467d949a0aadf212f47831a76f0218a1aeec509f36be4435ade403"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a68073975af10f9c5361f8c6cc451c60db99cf2bd2fbb7db31558aa0cfc5931c"
+    },
+    {
+      "path": "code/contract_smoke_test.py",
+      "sha256": "3c194574b432bf17b5ddc3adf01a75e6c01942837ff768a867db6cee243ff539"
+    },
+    {
+      "path": "code/dieta_agentic/__init__.py",
+      "sha256": "de05bd63614fbdfa3a80758bea46705cb5992133f21c0c1d2da381fd8b24c78a"
+    },
+    {
+      "path": "code/dieta_agentic/ablation.py",
+      "sha256": "35c07e2419a824b0a181ccfaaf9ff6f64fb25e3c36399ebf6453a912a9a6974e"
+    },
+    {
+      "path": "code/dieta_agentic/agent.py",
+      "sha256": "67b0d201da69c0e7e1524b477d7724c717b0d890b0b94973c6959ba15cca766c"
+    },
+    {
+      "path": "code/dieta_agentic/audit.py",
+      "sha256": "19a9db859a73af1b2a64418af2cd8d4460b73712fe4af4d11f7ae564bf387487"
+    },
+    {
+      "path": "code/dieta_agentic/contract_tools.py",
+      "sha256": "7b4c14d59ba9116e8ad2d1fa8aea6d38140a4f1d0819101a9af30e11c121bc60"
+    },
+    {
+      "path": "code/dieta_agentic/dieta_workflow.py",
+      "sha256": "9f9e0b148d978b94c933d60ae35887dccc45a1b7319b3a2af777642becccc250"
+    },
+    {
+      "path": "code/dieta_agentic/graph.py",
+      "sha256": "2a1e88285c09469c8367fd7599e70340755c11c2df0453f8b660d892a696563b"
+    },
+    {
+      "path": "code/dieta_agentic/legacy_tools.py",
+      "sha256": "7c6e2297a863636c4a9080e2bd3792bd8c3b522fa1325224149edbe08463c61d"
+    },
+    {
+      "path": "code/dieta_agentic/output_contracts.py",
+      "sha256": "ed8e1da011562cc80a1bdedb27b8967e646e2e205bd7af6041956ff14a8d498c"
+    },
+    {
+      "path": "code/dieta_agentic/runtime_primitives.py",
+      "sha256": "f679c25f3eb780a32a4abe1e0203e9d85481bbe25cf1cbe9b7654339c1334397"
+    },
+    {
+      "path": "code/dieta_agentic/ruqa_formula.py",
+      "sha256": "b7b305e7093cc97e80c2c9e237cb67785076367d95e21ed87dae5d7c59d36b37"
+    },
+    {
+      "path": "code/dieta_agentic/state.py",
+      "sha256": "7997245f9255746b68c166cf599ba17583182db69a8c7fdf315ddf3d8a362513"
+    },
+    {
+      "path": "code/dieta_agentic/tools.py",
+      "sha256": "5d2d40228d5bbda26bea435854098b065138b3de8bbf329c65e2ae417af8b29c"
+    },
+    {
+      "path": "code/dieta_core/candidate_entity_agent.py",
+      "sha256": "ec4c44d6942c9b80af168b7699a125183017ba64da09046e8846e0e74c3e2992"
+    },
+    {
+      "path": "code/dieta_core/candidate_relation_agent.py",
+      "sha256": "f4da0e815d56b9fe2570a28868236e957949fbe4d98d36c80fe9c8a15a03e1bd"
+    },
+    {
+      "path": "code/dieta_core/data/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/dieta_core/dietary_pattern_alignment_builder.py",
+      "sha256": "0d64a2fca4b38d1e98973d8805baba3405ea5df1ff497f733730083ff353e9c9"
+    },
+    {
+      "path": "code/dieta_core/entity_index_builder.py",
+      "sha256": "41b0f429ca1ae9d73699e0e77d2a55e4050dc18b10737483b64305515f7c519f"
+    },
+    {
+      "path": "code/dieta_core/feedback_refinement_agent.py",
+      "sha256": "822bd8e0c3ea11a6970becb3af3c244b362da40b5873ffb334c15ec21e088434"
+    },
+    {
+      "path": "code/dieta_core/grounding_alignment_agent.py",
+      "sha256": "a9aa49339be626270c4f6f6e3fd53960bf17d6c3e258c886ef0785fb233097bc"
+    },
+    {
+      "path": "code/dieta_core/grounding_data/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/dieta_core/model_client.py",
+      "sha256": "25ca24201b0f1cd0f25048e8c1ecda63bb7ba5144143e1f3aad12ecf9234bfe0"
+    },
+    {
+      "path": "code/dieta_core/prompts/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/dieta_core/quality_decision_agent.py",
+      "sha256": "b713836bfadbe6c3d7e3b60b4773960e9fe869084d9fb7cbd6dc2c49170c692a"
+    },
+    {
+      "path": "code/dieta_core/seed_entity_builder.py",
+      "sha256": "d33164f71cb73c2e7f958115c8fd28ce3a0c34509ac30ae82e07c00aab736cb2"
+    },
+    {
+      "path": "code/dieta_core/semantic_triage_agent.py",
+      "sha256": "709c0182fd255bd8e49ecedf32dd237b61649d55364b4126a22555aa6295ca42"
+    },
+    {
+      "path": "code/dieta_core/settings.py",
+      "sha256": "f3e21ad08b44225a462e0c817d878c0668f28ea47d50364fa5388bf8e85f5833"
+    },
+    {
+      "path": "code/dieta_core/task_schema_builder.py",
+      "sha256": "0b2259112864752f304f6b773630e6172a7e60f61deeb0a6d85cb2d3bdd54992"
+    },
+    {
+      "path": "code/dieta_core/utils.py",
+      "sha256": "7498ddd3f48ca25c14ae566001cbc7d2ab94df568f9cdaf6d660ec7b8184f83f"
+    },
+    {
+      "path": "code/export_ablation_trace.py",
+      "sha256": "77c46f273ec093d3fc44bad4af2f904ff4ed31a98db52e326a2810670cc8df6b"
+    },
+    {
+      "path": "code/normalize_final_outputs.py",
+      "sha256": "32971d3ec4a6d8e14d44e1216f4a44b640722865131961af738a187895999f88"
+    },
+    {
+      "path": "code/run_dieta_agentic.py",
+      "sha256": "92168198fe5be8fca26f16e4e312110dbf1a7b9a5f6d443cfcf02e58d0767347"
+    },
+    {
+      "path": "code/sanitize_release.py",
+      "sha256": "4127ebcea8077ce59a7367ca264d0b14b5ef9e43b10766da646752147208ec55"
+    },
+    {
+      "path": "code/verify_output_contracts.py",
+      "sha256": "b0962cdf07c7174c0f0338900b4330d4d445d58c23405f63239b0abaad289606"
+    },
+    {
+      "path": "docs/ABLATION_DESIGN.md",
+      "sha256": "3d567300bfc0c781dc226fc9b354335256318c9b5e170e326b3da1a5f011fb19"
+    },
+    {
+      "path": "docs/ARCHITECTURE_OVERVIEW.md",
+      "sha256": "6221bc27f3062ad3a105b992f100fc1af4586df5a982bbfb9479f3d677986213"
+    },
+    {
+      "path": "docs/CHANGELOG.md",
+      "sha256": "c20d077a7517ca4e9e30f29699797b694f81fae9f277a3978665941d61c0b40c"
+    },
+    {
+      "path": "docs/FORMULA_ALIGNMENT.md",
+      "sha256": "c48127bad71b0a3fcffb4c18bcfd4cdbfefcc58dac76954dcb4e992039193ec0"
+    },
+    {
+      "path": "docs/OUTPUT_CONTRACTS.md",
+      "sha256": "3b93bf9d5b5c8fc7bc9870781b0d62db62ba78f1d021d609f1957c0067ce7492"
+    },
+    {
+      "path": "docs/RUNBOOK.md",
+      "sha256": "6e90caddcd36c6c9dc74241e4e379a3646e774aecde03dbac75d08e98e300ebd"
+    },
+    {
+      "path": "docs/RUNTIME_ARCHITECTURE.md",
+      "sha256": "26f042d95707bf2eb2e27a3091c615fc0d1e3122d6f3230cf522c3d79af0f038"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "sha256": "847c0632f1b961995fcece65641436c8663fc874d7c8962053cd14968de3acc6"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "af9162a7a94f89061cd7b68f00e338dae95fcad81d33f47ee8eae5c81464543c"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "f19289e063211ac74fd9b0c1282af9a56bd86caf9273d553fee01e79c3113712"
+    },
+    {
+      "path": "schemas/audit_trace_schema.json",
+      "sha256": "344c851db6aa1c5707c831e2710f09ab409c40361d5ffe9d2431faf649ee331c"
+    },
+    {
+      "path": "schemas/workflow_schema.yaml",
+      "sha256": "07d9c9c0a4e5c2e1b7794c8f973bb95b5d538c11376c097105c2f056f02fe0ee"
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "0be9d79195b9e6d217825a350da1649c82552bd63e1b42da8a24f3fc067737f8"
+    },
+    {
+      "path": "tests/test_agent_cards.py",
+      "sha256": "ce281c8f0d4d88b920806a21669034a9696b33f5eb53886471cb713adc4d1051"
+    },
+    {
+      "path": "tests/test_output_contracts_and_ablation.py",
+      "sha256": "de63d726786fd06df12d375d3ec80ed3ec725de0feba86b40ae51df7bbc6fe61"
+    },
+    {
+      "path": "tests/test_ruqa_formula.py",
+      "sha256": "d724fc6cd74e155017a22462462605aa77456409b01b8bd933d9842cdcc5ebad"
+    }
+  ]
+}

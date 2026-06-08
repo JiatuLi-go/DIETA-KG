@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DIETA agent audit event",
+  "type": "object",
+  "required": [
+    "event_id",
+    "timestamp",
+    "agent_id",
+    "event_type"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "number"
+    },
+    "agent_id": {
+      "type": "string"
+    },
+    "event_type": {
+      "enum": [
+        "agent_start",
+        "tool_call",
+        "decision",
+        "handoff",
+        "agent_end",
+        "error"
+      ]
+    },
+    "input_artifacts": {
+      "type": "array"
+    },
+    "output_artifacts": {
+      "type": "array"
+    },
+    "tool_name": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "object"
+    },
+    "metrics": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "project": "DIETA",
+  "entrypoint": "code/run_dieta_agentic.py",
+  "core_module_dir": "code/dieta_core",
+  "runtime_module_dir": "code/dieta_agentic",
+  "default_model_env": "GCDI_KG_LLM_MODEL",
+  "default_model_value": "Qwen/Qwen2.5-72B-Instruct",
+  "temperature": 0,
+  "public_outputs": {
+    "step4": "code/dieta_core/results/quality_decision/quality_decision_latest.xlsx",
+    "step5": "code/dieta_core/results/grounding_alignment/grounding_alignment_latest.xlsx"
+  },
+  "score_formula": "s^(k)(t)=lambda_reflect(k)*Q^(k)(t)-lambda*U^(0)(t)",
+  "data_policy": "Raw corpora, private ontology resources, vector indexes, caches and generated result tables are excluded from version control."
+}
