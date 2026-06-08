@@ -161,3 +161,8 @@ python run_dieta_agentic.py --dry-run --variant full
 ```
 
 `docs/VALIDATION.md` records the checks expected for a clean release.
+## Copyright and use
+
+Copyright (c) 2026 Huixin Yu and collaborators.
+
+This repository is made publicly available for academic inspection and peer-review transparency. Unless otherwise stated, no permission is granted to reproduce, redistribute, sublicense, or create derivative works from the source code or associated materials before formal publication of the corresponding manuscript. A formal open-source license may be assigned after manuscript acceptance or publication.
